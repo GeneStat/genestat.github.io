@@ -8,8 +8,15 @@
 
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA==" crossorigin="anonymous" referrerpolicy="no-referrer"
+    />
     <title>GeneStat</title>
+    <style>
+        body {
+            font-weight: 600;
+            font-family: Montserrat, "Open Sans", Helvetica, Arial, sans-serif;
+        }
+    </style>
 </head>
 
 <body>
@@ -43,38 +50,64 @@
         </div>
     </nav>
 
-    <div class="container py-5">
-        <div class="p-5 mb-4 bg-light rounded-3">
-            <div class="container-fluid py-5">
-                <h1 class="display-5 fw-bold">Custom jumbotron</h1>
-                <p class="col-md-8 fs-4">Using a series of utilities, you can create this jumbotron, just like the one in previous versions of Bootstrap. Check out the examples below for how you can remix and restyle it to your liking.</p>
-                <button class="btn btn-primary btn-lg" type="button">Example button</button>
-            </div>
-        </div>
+    <div class="container-fluid py-5 pb-5 text-light" style="  background-image: url(' img/3d-rendering-big-red-coronavirus-cell-left-with-black-background.jpg');width:100%; height:80vh;  background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover; ">
+
+        <h1 class="display-5 fw-bold ">Genestat</h1>
+        <p class="col-md-8 fs-4 "> The virtual open scientific research team which Develop tools and analyze data for biostatiscs and Cancers with mentors and students. </p>
+
+
 
 
     </div>
-    <div class="container-fluid mt-3">
-        <h3 class="text-center text-light  pt-3">Our Team</h3>
-        <div class="row bg-dark ">
 
-            <h3 class="text-center text-light  pt-3">Our Team</h3>
+    <div class="container py-5 pb-5 text-dark">
+
+        <h1 class="display-5 fw-bold text-center">Research Areas</h1>
+        <div class="row text-center">
+            <div class="col-md-4"><i class="fa-solid fa-dna fa-5x"></i>
+                <br>
+                <h3>Biostatistics</h3>
+            </div>
+            <div class="col-md-4"><i class="fa-solid fa-database fa-5x"></i> <br>
+                <h3>Developing Tools</h3>
+            </div>
+
+            <div class="col-md-4"> <i class="fa-solid fa-book fa-5x"></i> <br>
+                <h3>Lecturing/Research</h3>
+            </div>
+
+
+
+        </div>
+
+    </div>
+    <div class="container-fluid  ">
+
+        <div class="row bg-dark " style=" height:80%;">
+
+            <h3 class="text-center text-light pt-3 ">Our Team</h3>
             <div class="col-sm-3 p-3 bg-primary ">
                 <!-- personel card -->
-                <div class="card" style=" width:100% ">
-                    <img class="card-img-top " src="img_avatar1.png " alt="Card image " style="width:100% ">
+                <div class="card " style=" width:100% ">
+                    <img class="card-img-top " src="img/img_avatar1.png " alt="Card image " style="width:100% ;">
                     <div class="card-body ">
                         <h4 class="card-title ">John Doe</h4>
                         <p class="card-text ">Some example text some example text. John Doe is an architect and engineer</p>
-                        <a href="# " class="btn btn-primary ">See Profile</a>
+                        <div class="social">
+                            <a href="#"><i class="fa-brands fa-linkedin fa-2x"></i></a>
+                            <a href="#"> <i class="fa-brands fa-github-square fa-2x"></i></a>
+                            <a href="#"> <i class="fa-brands fa-instagram-square fa-2x"></i></a>
+                        </div>
                     </div>
                 </div>
                 <!-- personel card -->
             </div>
-            <div class="col-sm-3 p-3 bg-dark  ">
+            <div class="col-sm-3 p-3 bg-dark ">
                 <!-- personel card -->
-                <div class="card" style=" width:100% ">
-                    <img class="card-img-top " src="img_avatar1.png " alt="Card image " style="width:100% ">
+                <div class="card " style=" width:100% ">
+                    <img class="card-img-top " src="img/img_avatar1.png " alt="Card image " style="width:100% ">
                     <div class="card-body ">
                         <h4 class="card-title ">John Doe</h4>
                         <p class="card-text ">Some example text some example text. John Doe is an architect and engineer</p>
@@ -84,11 +117,11 @@
                 <!-- personel card -->
 
             </div>
-            <div class="col-sm-3 p-3 bg-primary  ">
+            <div class="col-sm-3 p-3 bg-primary ">
 
                 <!-- personel card -->
-                <div class="card" style=" width:100% ">
-                    <img class="card-img-top " src="img_avatar1.png " alt="Card image " style="width:100% ">
+                <div class="card " style=" width:100% ">
+                    <img class="card-img-top " src="img/img_avatar1.png " alt="Card image " style="width:100% ">
                     <div class="card-body ">
                         <h4 class="card-title ">John Doe</h4>
                         <p class="card-text ">Some example text some example text. John Doe is an architect and engineer</p>
@@ -103,12 +136,12 @@
 
 
                 <!-- personel card -->
-                <div class="card" style=" width:100% ">
-                    <img class="card-img-top " src="img_avatar1.png " alt="Card image " style="width:100% ">
+                <div class="card " style=" width:100% ">
+                    <img class="card-img-top " src="img/img_avatar1.png " alt="Card image " style="width:100% ">
                     <div class="card-body ">
                         <h4 class="card-title ">John Doe</h4>
                         <p class="card-text ">Some example text some example text. John Doe is an architect and engineer</p>
-                        <a href="# " class="btn btn-primary ">See Profile</a>
+                        <div class="social"><a href="#"><i class="fa fa-facebook-official"></i></a><a href="#"><i class="fa fa-twitter"></i></a><a href="#"><i class="fa fa-instagram"></i></a></div>
                     </div>
                 </div>
                 <!-- personel card -->
@@ -117,9 +150,8 @@
     </div>
 
 
-
-    <footer class="container-fluid p-3 bg-dark">
-        <div class="text-center text-light">
+    <footer class="container-fluid p-3 bg-dark ">
+        <div class="text-center text-light ">
             &copy; GeneStat
         </div>
     </footer>
