@@ -1,157 +1,353 @@
-<!doctype html>
-<html lang="en">
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
 
 <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Primary Meta Tags -->
-    <meta name="title" content="Genestat Virtual Research Team">
-    <meta name="description" content="Genestat Virtual Research Team working on the biostatistics projects">
+    <title>GeneStat | Virtual Research Team</title>
+    <meta name="title" content="GeneStat Virtual Research Team">
+    <meta name="description"
+        content="Genestat Virtual Research Team working on the biostatistics projects and cancer research.">
     <meta name="author" content="Deniz Balcı">
 
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css " rel="stylesheet " integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC " crossorigin="anonymous ">
-    <link rel="stylesheet " href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css " integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA==" crossorigin=" anonymous
-        " referrerpolicy="no-referrer " />
-    <title>GeneStat</title>
-    <style>
-        body {
-            font-weight: 600;
-            font-family: Montserrat, "Open Sans ", Helvetica, Arial, sans-serif;
+    <!-- Google Fonts: Plus Jakarta Sans for a modern tech feel -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+                    },
+                    colors: {
+                        primary: {
+                            400: '#38bdf8', // Sky 400
+                            500: '#0ea5e9', // Sky 500
+                            600: '#0284c7', // Sky 600
+                        },
+                        dark: {
+                            800: '#1e293b',
+                            900: '#0f172a',
+                            950: '#020617',
+                        }
+                    },
+                    animation: {
+                        'float': 'float 6s ease-in-out infinite',
+                        'fade-in-up': 'fadeInUp 0.8s ease-out forwards',
+                    },
+                    keyframes: {
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0)' },
+                            '50%': { transform: 'translateY(-20px)' },
+                        },
+                        fadeInUp: {
+                            '0%': { opacity: '0', transform: 'translateY(20px)' },
+                            '100%': { opacity: '1', transform: 'translateY(0)' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style type="text/tailwindcss">
+        @layer utilities {
+            .glass {
+                @apply bg-white/5 backdrop-blur-lg border border-white/10;
+            }
+            .text-glow {
+                text-shadow: 0 0 20px rgba(56, 189, 248, 0.5);
+            }
+        }
+        
+        /* Smooth scrolling for the whole page */
+        html {
+            scroll-behavior: smooth;
         }
     </style>
 </head>
 
-<body>
+<body class="bg-dark-950 text-slate-300 antialiased overflow-x-hidden">
 
-    <div class="container-fluid py-5 pb-5 text-light " style=" background-image: url( ' img/3d-rendering-big-red-coronavirus-cell-left-with-black-background.jpg');width:100%; height:80vh; background-position: center; background-repeat: no-repeat; background-size:
-        cover; ">
-
-        <h1 class="display-5 fw-bold ">GeneStat</h1>
-        <p class="col-md-8 fs-4 "> The virtual open scientific research team which Develop tools and analyze data for biostatiscs and Cancers with mentors and students. </p>
-        <br>
-        <p class="col-md-8 fs-4 "> github repos:
-            <a href="https://github.com/GeneStat ">https://github.com/GeneStat</a>
-        </p>
-
-
-
-
-    </div>
-
-    <div class=" container py-5 pb-5 text-dark ">
-
-        <h1 class="display-5 fw-bold text-center p-3 pt-2 ">Research Areas</h1>
-        <div class="row text-center ">
-            <div class="col-md-4 "><i class="fa-solid fa-dna fa-5x pt-2 "></i>
-                <br>
-                <h3>Biostatistics</h3>
-            </div>
-            <div class="col-md-4 "><i class="fa-solid fa-database fa-5x pt-2 "></i> <br>
-                <h3>Developing Tools</h3>
-            </div>
-
-            <div class="col-md-4 "> <i class="fa-solid fa-book fa-5x pt-2 "></i> <br>
-                <h3>Lecturing/Research</h3>
-            </div>
-
-
-
-        </div>
-
-    </div>
-    <div class="container-fluid ">
-
-        <div class="row bg-dark " style=" height:80%; ">
-
-            <h2 class="text-center text-light pt-4 ">OUR TEAM</h2>
-            <div class="col-sm-3 bg-primary ">
-                <!-- personel card -->
-                <div class="card mt-2 " style=" width:100% ">
-                    <img class="card-img-top " src="img/linlin.jpeg" alt="LinLin Yan " style="width:100% ; ">
-                    <div class="card-body ">
-                        <h4 class="card-title ">LinLin Yan</h4>
-                        <p class="card-text ">Bioinformatics Specialist /Mentor </p>
-                        <div class="social ">
-                            <a href="https://www.linkedin.com/in/yanlinlin82/ "><i class="fa-brands fa-linkedin fa-2x "></i></a>
-                            <a href="https://github.com/yanlinlin82 "> <i class="fa-brands fa-github-square fa-2x "></i></a>
-                        </div>
+    <!-- Navbar -->
+    <nav class="fixed w-full z-50 transition-all duration-300 glass border-b-0 border-white/10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                <div class="flex-shrink-0">
+                    <a href="#"
+                        class="text-2xl font-bold text-white tracking-tight hover:text-primary-400 transition-colors">
+                        Gene<span class="text-primary-400">Stat</span>
+                    </a>
+                </div>
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-8">
+                        <a href="#home"
+                            class="text-white hover:text-primary-400 px-3 py-2 rounded-md text-sm font-medium transition-colors">Home</a>
+                        <a href="#research"
+                            class="text-slate-300 hover:text-white hover:bg-white/5 px-3 py-2 rounded-md text-sm font-medium transition-all">Research</a>
+                        <a href="#team"
+                            class="text-slate-300 hover:text-white hover:bg-white/5 px-3 py-2 rounded-md text-sm font-medium transition-all">Team</a>
+                        <a href="https://github.com/GeneStat" target="_blank"
+                            class="bg-white/10 hover:bg-white/20 text-white px-4 py-2 rounded-full text-sm font-medium transition-all border border-white/10 flex items-center gap-2">
+                            <i class="fa-brands fa-github"></i> GitHub
+                        </a>
                     </div>
                 </div>
-                <!-- personel card -->
-            </div>
-            <div class="col-sm-3 p-3 bg-dark ">
-                <!-- personel card -->
-                <div class="card " style=" width:100% ">
-                    <img class="card-img-top " src="img/alper-sinan.jpeg" alt="Alper Sinan Çalık " style="width:100% ">
-                    <div class="card-body ">
-                        <h4 class="card-title ">Alper Sinan Çalık</h4>
-                        <p class="card-text ">Junior Datascientist </p>
-                        <div class="social ">
-                            <a href="https://www.linkedin.com/in/ascstat/ "><i class="fa-brands fa-linkedin fa-2x "></i></a>
-
-                        </div>
-                    </div>
-                </div>
-                <!-- personel card -->
-
-            </div>
-            <div class="col-sm-3 bg-primary ">
-                <!-- personel card -->
-                <div class="card mt-2 " style=" width:100% ">
-                    <img class="card-img-top " src="img/ilker.jpeg " alt="ilker manap" style="width:100% ; ">
-                    <div class="card-body ">
-                        <h4 class="card-title ">İlker Manap</h4>
-                        <p class="card-text ">System Administrator/Mentor </p>
-                        <div class="social ">
-                            <a href="https://www.linkedin.com/in/ilker-manap-345a5529/ "><i class="fa-brands fa-linkedin fa-2x "></i></a>
-                            <a href="https://github.com/ilkermanap "> <i class="fa-brands fa-github-square fa-2x "></i></a>
-                        </div>
-                    </div>
-                </div>
-                <!-- personel card -->
-            </div>
-            <div class="col-sm-3 p-3 bg-dark ">
-
-
-                <!-- personel card -->
-                <div class="card " style=" width:100% ">
-                    <img class="card-img-top " src="img/deniz.jpeg " alt="deniz balcı " style="width:100% ">
-                    <div class="card-body ">
-                        <h4 class="card-title ">Deniz Balcı</h4>
-                        <p class="card-text ">Junior Developer</p>
-                        <div class="social ">
-                            <a href="https://www.linkedin.com/in/deniz-soft/ "><i class="fa-brands fa-linkedin fa-2x "></i></a>
-                            <a href="https://github.com/SirmaXX "> <i class="fa-brands fa-github-square fa-2x "></i></a>
-                        </div>
-                    </div>
-                </div>
-                <!-- personel card -->
             </div>
         </div>
-    </div>
+    </nav>
 
+    <!-- Hero Section -->
+    <section id="home" class="relative min-h-screen flex items-center justify-center overflow-hidden">
+        <!-- Background Image with Overlay -->
+        <div class="absolute inset-0 z-0">
+            <img src="img/3d-rendering-big-red-coronavirus-cell-left-with-black-background.jpg" alt="Background"
+                class="w-full h-full object-cover opacity-60">
+            <!-- Modern Gradient Overlay -->
+            <div class="absolute inset-0 bg-gradient-to-r from-dark-950 via-dark-950/90 to-dark-900/40"></div>
+            <div class="absolute inset-0 bg-gradient-to-b from-dark-950/50 via-transparent to-dark-950"></div>
+        </div>
 
-    <footer class="container-fluid p-3 bg-dark ">
-        <div class="text-center text-light ">
-            &copy; GeneStat
+        <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center pt-20">
+            <div class="space-y-8 animate-fade-in-up">
+                <div
+                    class="inline-block px-4 py-1.5 rounded-full border border-primary-500/30 bg-primary-500/10 text-primary-400 text-sm font-medium mb-4">
+                    Innovating Biostatistics Research
+                </div>
+
+                <h1 class="text-5xl md:text-7xl font-extrabold text-white tracking-tight leading-tight">
+                    Unlocking the Code of <br>
+                    <span
+                        class="bg-clip-text text-transparent bg-gradient-to-r from-primary-400 to-indigo-500 text-glow">Life
+                        & Data</span>
+                </h1>
+
+                <p class="mt-6 max-w-2xl mx-auto text-lg md:text-xl text-slate-400 leading-relaxed">
+                    A virtual open scientific research team developing tools and analyzing data for biostatistics and
+                    cancer research. Collaboration between mentors and students to push the boundaries of science.
+                </p>
+
+                <div class="mt-10 flex flex-col sm:flex-row justify-center gap-4">
+                    <a href="#research"
+                        class="group relative px-8 py-3.5 bg-primary-600 text-white rounded-full font-semibold overflow-hidden shadow-lg shadow-primary-500/25 transition-all hover:scale-105 hover:shadow-primary-500/40">
+                        <span class="relative z-10 flex items-center gap-2">
+                            Explore Research <i
+                                class="fa-solid fa-arrow-right group-hover:translate-x-1 transition-transform"></i>
+                        </span>
+                        <div
+                            class="absolute inset-0 bg-gradient-to-r from-primary-500 to-indigo-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                        </div>
+                    </a>
+                    <a href="https://github.com/GeneStat" target="_blank"
+                        class="px-8 py-3.5 rounded-full font-semibold text-white glass hover:bg-white/10 transition-all hover:scale-105 border border-white/20">
+                        View GitHub
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Scroll Down Indicator -->
+        <div class="absolute bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce text-slate-500">
+            <i class="fa-solid fa-chevron-down fa-xl"></i>
+        </div>
+    </section>
+
+    <!-- Research Areas Section -->
+    <section id="research" class="py-24 bg-dark-950 relative">
+        <!-- Decoration -->
+        <div class="absolute top-0 right-0 -mr-20 -mt-20 w-96 h-96 bg-primary-500/10 rounded-full blur-3xl"></div>
+        <div class="absolute bottom-0 left-0 -ml-20 -mb-20 w-96 h-96 bg-indigo-500/10 rounded-full blur-3xl"></div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="text-center mb-16">
+                <h2 class="text-primary-400 font-semibold tracking-wide uppercase text-sm">What We Do</h2>
+                <h2 class="mt-2 text-3xl md:text-4xl font-bold text-white">Research Areas</h2>
+                <p class="mt-4 text-slate-400 max-w-2xl mx-auto">Foundational pillars driving our scientific discovery
+                    and tool development.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Card 1 -->
+                <div
+                    class="group relative p-8 rounded-2xl glass hover:bg-white/10 transition-all duration-300 hover:-translate-y-2">
+                    <div
+                        class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-primary-500 to-indigo-500 rounded-t-2xl opacity-0 group-hover:opacity-100 transition-opacity">
+                    </div>
+                    <div
+                        class="w-16 h-16 rounded-xl bg-primary-500/20 flex items-center justify-center text-primary-400 mb-6 group-hover:scale-110 transition-transform duration-300">
+                        <i class="fa-solid fa-dna fa-2x"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-3">Biostatistics</h3>
+                    <p class="text-slate-400 leading-relaxed">
+                        Applying statistical theory to biological experiments, interpreting complex data to unravel
+                        genetic patterns.
+                    </p>
+                </div>
+
+                <!-- Card 2 -->
+                <div
+                    class="group relative p-8 rounded-2xl glass hover:bg-white/10 transition-all duration-300 hover:-translate-y-2">
+                    <div
+                        class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-primary-500 to-indigo-500 rounded-t-2xl opacity-0 group-hover:opacity-100 transition-opacity">
+                    </div>
+                    <div
+                        class="w-16 h-16 rounded-xl bg-primary-500/20 flex items-center justify-center text-primary-400 mb-6 group-hover:scale-110 transition-transform duration-300">
+                        <i class="fa-solid fa-database fa-2x"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-3">Developing Tools</h3>
+                    <p class="text-slate-400 leading-relaxed">
+                        Creating open-source software and command-line tools to streamline bioinformatics workflows and
+                        analysis.
+                    </p>
+                </div>
+
+                <!-- Card 3 -->
+                <div
+                    class="group relative p-8 rounded-2xl glass hover:bg-white/10 transition-all duration-300 hover:-translate-y-2">
+                    <div
+                        class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-primary-500 to-indigo-500 rounded-t-2xl opacity-0 group-hover:opacity-100 transition-opacity">
+                    </div>
+                    <div
+                        class="w-16 h-16 rounded-xl bg-primary-500/20 flex items-center justify-center text-primary-400 mb-6 group-hover:scale-110 transition-transform duration-300">
+                        <i class="fa-solid fa-book fa-2x"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-3">Lecturing & Research</h3>
+                    <p class="text-slate-400 leading-relaxed">
+                        Sharing knowledge through mentorship and publishing findings to contribute to the global
+                        scientific community.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team Section -->
+    <section id="team" class="py-24 bg-dark-900">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-primary-400 font-semibold tracking-wide uppercase text-sm">Meet The Makers</h2>
+                <h2 class="mt-2 text-3xl md:text-4xl font-bold text-white">Our Team</h2>
+                <p class="mt-4 text-slate-400 max-w-2xl mx-auto">The dedicated specialists and developers behind
+                    GeneStat.</p>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+
+                <!-- Team Member 1 -->
+                <div
+                    class="group glass rounded-2xl overflow-hidden hover:shadow-2xl hover:shadow-primary-900/20 transition-all duration-300 transform hover:-translate-y-1">
+                    <div class="aspect-w-1 aspect-h-1 w-full overflow-hidden">
+                        <img src="img/linlin.jpeg" alt="LinLin Yan"
+                            class="w-full h-64 object-cover object-center group-hover:scale-105 transition-transform duration-500">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-lg font-bold text-white">LinLin Yan</h3>
+                        <p class="text-primary-400 text-sm mb-4">Bioinformatics Specialist / Mentor</p>
+                        <div class="flex space-x-4">
+                            <a href="https://www.linkedin.com/in/yanlinlin82/"
+                                class="text-slate-400 hover:text-white transition-colors"><i
+                                    class="fa-brands fa-linkedin fa-lg"></i></a>
+                            <a href="https://github.com/yanlinlin82"
+                                class="text-slate-400 hover:text-white transition-colors"><i
+                                    class="fa-brands fa-github-square fa-lg"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Team Member 2 -->
+                <div
+                    class="group glass rounded-2xl overflow-hidden hover:shadow-2xl hover:shadow-primary-900/20 transition-all duration-300 transform hover:-translate-y-1">
+                    <div class="aspect-w-1 aspect-h-1 w-full overflow-hidden">
+                        <img src="img/img_avatar1.png" alt="Hua Gao"
+                            class="w-full h-64 object-cover object-center group-hover:scale-105 transition-transform duration-500">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-lg font-bold text-white">Hua Gao</h3>
+                        <p class="text-primary-400 text-sm mb-4">Bioinformatics Specialist / Mentor</p>
+                        <div class="flex space-x-4">
+                            <a href="https://www.linkedin.com/in/ghbore/"
+                                class="text-slate-400 hover:text-white transition-colors"><i
+                                    class="fa-brands fa-linkedin fa-lg"></i></a>
+                            <a href="https://github.com/ghbore"
+                                class="text-slate-400 hover:text-white transition-colors"><i
+                                    class="fa-brands fa-github-square fa-lg"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Team Member 3 -->
+                <div
+                    class="group glass rounded-2xl overflow-hidden hover:shadow-2xl hover:shadow-primary-900/20 transition-all duration-300 transform hover:-translate-y-1">
+                    <div class="aspect-w-1 aspect-h-1 w-full overflow-hidden">
+                        <img src="img/ilker.jpeg" alt="İlker Manap"
+                            class="w-full h-64 object-cover object-center group-hover:scale-105 transition-transform duration-500">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-lg font-bold text-white">İlker Manap</h3>
+                        <p class="text-primary-400 text-sm mb-4">System Administrator / Mentor</p>
+                        <div class="flex space-x-4">
+                            <a href="https://www.linkedin.com/in/ilker-manap-345a5529/"
+                                class="text-slate-400 hover:text-white transition-colors"><i
+                                    class="fa-brands fa-linkedin fa-lg"></i></a>
+                            <a href="https://github.com/ilkermanap"
+                                class="text-slate-400 hover:text-white transition-colors"><i
+                                    class="fa-brands fa-github-square fa-lg"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Team Member 4 -->
+                <div
+                    class="group glass rounded-2xl overflow-hidden hover:shadow-2xl hover:shadow-primary-900/20 transition-all duration-300 transform hover:-translate-y-1">
+                    <div class="aspect-w-1 aspect-h-1 w-full overflow-hidden">
+                        <img src="img/deniz.jpeg" alt="Deniz Balcı"
+                            class="w-full h-64 object-cover object-center group-hover:scale-105 transition-transform duration-500">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-lg font-bold text-white">Deniz Balcı</h3>
+                        <p class="text-primary-400 text-sm mb-4">Software Developer</p>
+                        <div class="flex space-x-4">
+                            <a href="https://www.linkedin.com/in/deniz-soft/"
+                                class="text-slate-400 hover:text-white transition-colors"><i
+                                    class="fa-brands fa-linkedin fa-lg"></i></a>
+                            <a href="https://github.com/SirmaXX"
+                                class="text-slate-400 hover:text-white transition-colors"><i
+                                    class="fa-brands fa-github-square fa-lg"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark-950 border-t border-white/10 py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-4 md:mb-0">
+                    <span class="text-2xl font-bold text-white">Gene<span class="text-primary-500">Stat</span></span>
+                    <p class="text-slate-500 text-sm mt-1">Accelerating research through code.</p>
+                </div>
+
+                <div class="text-slate-500 text-sm">
+                    &copy;
+                    <script>document.write(new Date().getFullYear())</script> GeneStat. All rights reserved.
+                </div>
+            </div>
         </div>
     </footer>
 
-
-    <!-- Optional JavaScript; choose one of the two! -->
-
-    <!-- Option 1: Bootstrap Bundle with Popper -->
-    <script src=" https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js " integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM " crossorigin="anonymous "></script>
-
-    <!-- Option 2: Separate Popper and Bootstrap JS -->
-    <!--
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js " integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p " crossorigin="anonymous "></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js " integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF " crossorigin="anonymous "></script>
-    -->
 </body>
-
-</html>
 
 </html>
